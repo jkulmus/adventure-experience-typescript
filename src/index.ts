@@ -55,9 +55,16 @@ runAsyncDemo();
 console.log("\nEXCEPTION HANDLING TEST");
 
 try {
-    validateMood("scary");
+    validateMood("adventure");
+    console.log("Adventure is a valid mood");
+} catch (error) {
+    if (error instanceof Error) {
+        console.log(`Caught Error: ${error.message}`);
+    }
+}
 
-    console.log("Mood is valid");
+try {
+    validateMood("scary");
 } catch (error) {
     if (error instanceof Error) {
         console.log(`Caught Error: ${error.message}`);
