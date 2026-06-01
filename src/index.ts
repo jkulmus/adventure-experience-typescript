@@ -4,7 +4,9 @@ import { recursiveSearch } from "./RecursiveSearch";
 import { loadExperiences } from "./AsyncLoader";
 import { validateMood } from "./Validation";
 
-console.log("Adventure Experience Recommendation Toolkit");
+console.log("=====================================");
+console.log(" Adventure Experience Toolkit");
+console.log("=====================================");
 
 const result = RecommendationEngine.findMatch(
     experiences,
@@ -12,22 +14,23 @@ const result = RecommendationEngine.findMatch(
     "friends"
 );
 
+console.log("\nRECOMMENDATION ENGINE")
+
 if (result) {
-    console.log("\nRecommendation:");
-    console.log(result.title);
-    console.log(result.description);
+    console.log("----------------------------");
+    console.log(`Title: ${result.title}`);
+    console.log(`Description: ${result.description}`);
 } else {
     console.log("No matching experience found");
 }
 
-// Recursion Demo
+console.log("\nRECURSIVE SEARCH TEST");
+
 const moods = [
     "relaxing",
     "adventure",
     "fantasy"
 ];
-
-console.log("\nRecursive Search Test:");
 
 const found = recursiveSearch(
     moods,
@@ -37,18 +40,19 @@ const found = recursiveSearch(
 console.log(`Fantasy found: ${found}`);
 
 async function runAsyncDemo() {
+
+    console.log("\nASYNC DATA LOADING");
     console.log("\nLoading experiences...");
 
     const loadedExperiences = await loadExperiences();
 
     console.log(
-        `Loaded ${loadedExperiences.length} experiences successfully`
+        `Successfully loaded ${loadedExperiences.length} experiences`
     );
 }
 
 runAsyncDemo();
-
-console.log("\nException Handling Test:");
+console.log("\nEXCEPTION HANDLING TEST");
 
 try {
     validateMood("scary");
@@ -59,3 +63,7 @@ try {
         console.log(`Caught Error: ${error.message}`);
     }
 }
+
+console.log("\n=====================================");
+console.log(" End of Program");
+console.log("=====================================");
