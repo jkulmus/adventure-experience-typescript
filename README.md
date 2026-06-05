@@ -16,7 +16,7 @@ My program uses structured recommendation data to generate personalized adventur
 The purpose of this project is to learn then strengthen my my understanding of TypeScript and learn how static typing improves code organization, maintainability, and error detection while building software that could later support applications.
 
 
-[Software Demo Video](https://youtu.be/a5SSxSpAAeM)
+[Software Demo Video](https://youtu.be/WrLdDscoa1g)
 
 # Development Environment
 
