@@ -1,3 +1,7 @@
+/**
+ * Recursively searches an array for a target value
+ */
+
 export function recursiveSearch(
     items: string[],
     target: string,

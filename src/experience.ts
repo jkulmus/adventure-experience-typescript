@@ -1,3 +1,7 @@
+/**
+ * Represents a single adventure experience
+ */
+
 export class Experience {
     constructor(
         public mood: string,

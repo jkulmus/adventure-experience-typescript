@@ -1,5 +1,9 @@
 import { Experience } from "./Experience";
 
+/**
+ * Searches the experience list for a matching mood and group
+ */
+
 export class RecommendationEngine {
     static findMatch(
         experiences: Experience[],
